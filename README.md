@@ -1,0 +1,4 @@
+- gelen base64 HTML kodunu MPDF kütüphanesi ile pdf 'e çevirir daha sonra print node'a gelen print node key ile istek gönderir
+- ilk kurulumda composer.lock ve vendor sil composer install yap veya direk vendor ile kullanma durumuna dikkat et
+- tmp klasörü oluşturulmuş ve chmod izin verilmiş olması 
+- PHP hataları açık olası hataları görmek için
