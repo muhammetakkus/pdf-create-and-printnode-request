@@ -21,11 +21,11 @@ $mpdf = new \Mpdf\Mpdf([
         'margin_top' => 0,
         'margin_bottom' => 0,
         'margin_header' => 0,
-	'margin_footer' => $o == 'P' ? 5 : 0,
+	'margin_footer' => $o == 'P' ? 5 : 1,
         'falseBoldWeight' => 10, 
         'dpi' => 96,
 	// Portrait (Dikey) veya Landscape (Yatay) 
-        'orientation' => 'P',
+        'orientation' => $o == 'P' ? 'P' : 'L',
         //'tempDir' => '/var/www/pdf/tmp'
 ]);
 

@@ -8,8 +8,9 @@
 	
     $html = $data['html'];
     $targetPrinter = $data['target_printer'];    
-    $pdf = toPDF($html);
     $api_key = $data['printnode_key'];
+    $o = $data['o'] ?? 'P';
+    $pdf = toPDF($html, $o);
 
     /*PrintNode*/
     $credentials = new \PrintNode\Credentials\ApiKey($api_key);
@@ -78,9 +79,10 @@
    Eski PrintNode Client ***/
 
     
- function toPDF($html) {
+ function toPDF($html, $o = 'P') {
 	$data = [
-		"html" => base64_encode($html)
+		"html" => base64_encode($html),
+                "o" => $o
 	];
 	
 	$curl = curl_init();
